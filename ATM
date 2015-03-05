@@ -1,0 +1,42 @@
+#Ana Karen Zazueta Pimentel
+#A01630485
+money = 1000
+print ("Welcome")
+don = int(input("Do you wish to donate for a scholarship? 1.Yes  2.No "))
+if don==1:
+	print("1.$1")
+	print("2.$2")
+	print("3.$5")
+	doncant = int (input("How much do you wish to donate?"))
+	if doncant==1:
+		money = money-1
+		print("Thank you for your donation")
+	else:
+		if doncant==2:
+			money = money-2
+			print("Thank you for your donation")
+		else:
+			money = money-5
+			print ("Thank you for your donation")
+else:
+	print("Thank you")
+prog = 0
+while (prog != 4):
+	choice = int(input("1.Balance 2.-Deposit 3.-Withdraw 4.Exit ")) 
+	if choice == 1:
+		print ("Balance: $", money)
+	else:
+		if choice == 2:
+			acc = input("Account: ")
+			dep = int(input("Deposit: $"))
+			money = money-dep
+		else:
+			if choice == 3:
+				wit = int(input("Withdraw: $"))
+				money = money-wit
+			else:
+				if choice > 4:
+					print ("Error")
+				else:
+					prog = 4
+print ("Have a nice day!")
