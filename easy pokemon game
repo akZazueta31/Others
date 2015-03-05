@@ -1,0 +1,242 @@
+#Ana Karen Zazueta Pimentel
+#A01630485
+from random import randrange
+poke = randrange(1,3)
+userhp = 100
+cphp = 100
+lose = 0
+if (poke == 1):
+	print("A wild oddish appeared!")
+	print("Go, Togetic!")
+	while (lose != 1):
+		move = int(input("1.-FairyWind 2.-Extrasensory 3.-MorningSun"))
+		if (move == 1):
+			print("Togetic used FairyWind!")
+			dmg = randrange(18,25)
+			cphp = cphp - dmg
+			print("Oddish lost ", dmg, " hp")
+			if (cphp > 0):
+				print("Oddish Hp: ", cphp)
+			else:
+				print("Oddish Hp: 0")
+		else: 
+			if (move == 2):
+				print("Togetic used Extrasensory!")
+				dmg = randrange(10,35)
+				cphp = cphp - dmg
+				print("Oddish lost ", dmg, " hp")
+				if (cphp > 0):
+					print("Oddish Hp: ", cphp)
+				else:
+					print("Oddish Hp: 0")
+			else:
+				print("Togetic used MorningSun!")
+				reco = randrange(18,25)
+				userhp = userhp + reco
+				print("Togetic recovered some hp!")
+				if (userhp < 100):
+					print("Togetic Hp: ", userhp)
+				else:
+					print("Togetic Hp: 100")
+		if (userhp < 1):
+			lose = lose + 1
+			print("Oh no! Togetic fainted!")
+		else:
+			if (cphp < 1):
+				lose = lose + 1
+				print("The wild oddish fainted!")
+			else:
+				cpmov = randrange(1,3)
+				if (cpmov == 1):
+					print("Oddish used Tackle!")
+					dmg = randrange(18,25)
+					userhp = userhp - dmg
+					print("Togetic lost ", dmg, " hp")
+					if (userhp > 0):
+						print("Togetic Hp: ", userhp)
+					else:
+						print("Togetic Hp: 0")
+				else:
+					if (cpmov == 2):
+						print("Oddish used RazorLeaf!")
+						dmg = randrange(10,35)
+						userhp = userhp - dmg
+						print("Togetic lost ", dmg, " hp")
+						if (userhp > 0):
+							print("Togetic Hp: ", userhp)
+						else:
+							print("Togetic Hp: 0")
+					else:
+						print("Oddish used Synthesis!")
+						reco = randrange(18,25)
+						cphp = cphp + reco
+						print("Oddish recovered some hp")
+						if (cphp < 100):
+							print("Oddish Hp: ", cphp)
+						else:
+							print("Oddish Hp: 100")
+				if (userhp < 1):
+					lose = lose + 1
+					print("Oh no! Togetic fainted!")
+				else:
+					if (cphp < 1):
+						lose = lose + 1
+						print("The wild oddish fainted!")
+					else:
+						lose = lose + 0
+else:
+	if (poke == 2):
+		print("A wild chansey appeared!")
+		print("Go, Togetic!")
+		while (lose != 1):
+			move = int(input("1.-FairyWind 2.-Extrasensory 3.-MorningSun"))
+			if (move == 1):
+				print("Togetic used FairyWind!")
+				dmg = randrange(18,25)
+				cphp = cphp - dmg
+				print("Chansey lost ", dmg, " hp")
+				if (cphp > 0):
+					print("Chansey Hp: ", cphp)
+				else:
+					print("Chansey Hp: 0")
+			else: 
+				if (move == 2):
+					print("Togetic used Extrasensory!")
+					dmg = randrange(10,35)
+					cphp = cphp - dmg
+					print("Chansey lost ", dmg, " hp")
+					print("Chansey Hp: ", cphp)
+				else:
+					print("Togetic used MorningSun!")
+					reco = randrange(18,25)
+					userhp = userhp + reco
+					print("Togetic recovered some hp!")
+					if (userhp < 100):
+						print("Togetic Hp: ", userhp)
+					else:
+						print("Togetic Hp: 100")
+			if (userhp < 1):
+				lose = lose + 1
+				print("Oh no! Togetic fainted!")
+			else:
+				if (cphp < 1):
+					lose = lose + 1
+					print("The wild chansey fainted!")
+				else:
+					cpmov = randrange(1,3)
+					if (cpmov == 1):
+						print("Chansey used Pound!")
+						dmg = randrange(18,25)
+						userhp = userhp - dmg
+						print("Togetic lost ", dmg, " hp")
+						if (userhp > 0):
+							print("Togetic Hp: ", userhp)
+						else:
+							print("Togetic Hp: 0")
+					else:
+						if (cpmov == 2):
+							print("Chansey used EggBomb!")
+							dmg = randrange(10,35)
+							userhp = userhp - dmg
+							print("Togetic lost ", dmg, " hp")
+							if (userhp > 0):
+								print("Togetic Hp: ", userhp)
+							else:
+								print("Togetic Hp: 0")
+						else:
+							print("Chansey used Softboiled!")
+							reco = randrange(18,25)
+							cphp = cphp + reco
+							print("Chansey recovered some hp")
+							if (cphp < 100):
+								print("Chansey Hp: ", cphp)
+							else:
+								print("Chansey Hp: 100")
+					if (userhp < 1):
+						lose = lose + 1
+						print("Oh no! Togetic fainted!")
+					else:
+						if (cphp < 1):
+							lose = lose + 1
+							print("The wild chansey fainted!")
+						else:
+							lose = lose + 0
+	else:
+		print("A wild pidgey appeared!")
+		print("Go, Togetic!")
+		while (lose != 1):
+			move = int(input("1.-FairyWind 2.-Extrasensory 3.-MorningSun"))
+			if (move == 1):
+				print("Togetic used FairyWind!")
+				dmg = randrange(18,25)
+				cphp = cphp - dmg
+				print("Pidgey lost ", dmg, " hp")
+				if (cphp > 0):
+					print("Pidgey Hp: ", cphp)
+				else:
+					print("Pidgey Hp: 0")
+			else: 
+				if (move == 2):
+					print("Togetic used Extrasensory!")
+					dmg = randrange(10,35)
+					cphp = cphp - dmg
+					print("Pidgey lost ", dmg, " hp")
+					if (cphp > 0):
+						print("Pidgey Hp: ", cphp)
+					else:
+						print("Pidgey Hp: 0")
+				else:
+					print("Togetic used MorningSun!")
+					reco = randrange(18,25)
+					userhp = userhp + reco
+					print("Togetic recovered some hp!")
+					if (userhp < 100):
+						print("Togetic Hp: ", userhp)
+					else:
+						print("Togetic Hp: 100")
+			if (userhp < 1):
+				lose = lose + 1
+				print("Oh no! Togetic fainted!")
+			else:
+				if (cphp < 1):
+					lose = lose + 1
+					print("The wild Pidgey fainted!")
+				else:
+					cpmov = randrange(1,3)
+					if (cpmov == 1):
+						print("Pidgey used Gust!")
+						dmg = randrange(18,25)
+						userhp = userhp - dmg
+						print("Togetic lost ", dmg, " hp")
+						if (userhp > 0):
+							print("Togetic Hp: ", userhp)
+						else:
+							print("Togetic Hp: 0")
+					else:
+						if (cpmov == 2):
+							print("Pidgey used WingAttack!")
+							dmg = randrange(10,35)
+							userhp = userhp - dmg
+							print("Togetic lost ", dmg, " hp")
+							if (userhp > 0):
+								print("Togetic Hp: ", userhp)
+							else:
+								print("Togetic Hp: 0")
+						else:
+							print("Pidgey used Roost!")
+							reco = randrange(18,25)
+							cphp = cphp + reco
+							print("Pidgey recovered some hp")
+							if (cphp < 100):
+								print("Pidgey Hp: ", cphp)
+							else:
+								print("Pidgey Hp: 100")
+					if (userhp < 1):
+						lose = lose + 1
+						print("Oh no! Togetic fainted!")
+					else:
+						if (cphp < 1):
+							lose = lose + 1
+							print("The wild Pidgey fainted!")
+						else:
+							lose = lose + 0
